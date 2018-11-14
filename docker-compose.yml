@@ -21,3 +21,9 @@ services:
       - ./database/mysqldumps/app_testing.sql:/docker-entrypoint-initdb.d/app_testing.sql
   redis:
     image: redis:3.0
+  start_dependencies:
+    image: dadarek/wait-for-dependencies
+    depends_on:
+      - mysql
+      - redis
+    command: mysql:3306 redis:6379

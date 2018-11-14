@@ -22,7 +22,6 @@ RUN apt-get update && apt-get install -y \
     locales \
     zip \
     jpegoptim optipng pngquant gifsicle \
-    libldap2-dev \
     git \
     libxml2-dev \
     php-soap
